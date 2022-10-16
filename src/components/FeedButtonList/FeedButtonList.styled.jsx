@@ -5,5 +5,6 @@ export const ButtonList = styled.div`
 `;
 export const FeedButton = styled.button`
   outline: none;
-  padding: 8px 12px;
+  padding: 4px 8px;
+  font-size: 16px;
 `;

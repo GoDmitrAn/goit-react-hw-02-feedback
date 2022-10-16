@@ -9,12 +9,22 @@ export class FeedbackComponent extends Component {
     neutral: 0,
     bad: 0,
   };
+  handleIncrementFeedback = evt => {
+    const { target } = evt;
+
+    this.setState(prevState => {
+      const nameElement = target.name;
+      return { [nameElement]: prevState[nameElement] + 1 };
+    });
+  };
   render() {
     return (
       <FeedbackBox>
         <Title>Please leave feedback</Title>
-        <FeedButtonList></FeedButtonList>
-        <Statistics></Statistics>
+        <FeedButtonList
+          handleIncrementFeedback={this.handleIncrementFeedback}
+        ></FeedButtonList>
+        <Statistics state={this.state}></Statistics>
       </FeedbackBox>
     );
   }

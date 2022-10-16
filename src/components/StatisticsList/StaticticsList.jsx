@@ -1,11 +1,11 @@
 import { ItemsList, Item } from './StatisticsList.styled';
 
-export const StatisticsList = () => {
+export const StatisticsList = ({ stateElements }) => {
   return (
     <ItemsList>
-      <Item>Good</Item>
-      <Item>Neutral</Item>
-      <Item>Bad</Item>
+      <Item>Good: {stateElements.good}</Item>
+      <Item>Neutral: {stateElements.neutral}</Item>
+      <Item>Bad: {stateElements.bad}</Item>
     </ItemsList>
   );
 };

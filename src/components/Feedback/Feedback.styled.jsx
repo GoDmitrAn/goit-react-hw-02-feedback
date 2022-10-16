@@ -4,5 +4,7 @@ export const Title = styled.h1`
 `;
 export const FeedbackBox = styled.div`
   max-width: 400px;
-  margin: 20px auto;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #2e2e2e;
 `;
