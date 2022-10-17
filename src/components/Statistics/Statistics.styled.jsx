@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
-export const StatisticTitle = styled.h2`
-  font-size: 28px;
+export const ItemsList = styled.ul`
+  list-style: none;
+`;
+export const Item = styled.li`
+  margin-bottom: 4px;
 `;

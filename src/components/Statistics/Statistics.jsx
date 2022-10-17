@@ -1,16 +1,22 @@
-import { StatisticsList } from 'components/StatisticsList/StaticticsList';
-import { Fragment } from 'react';
-import { StatisticTitle } from './Statistics.styled';
+import { ItemsList, Item } from './Statistics.styled';
+import { Notification } from 'components/Notification/Notification';
 
-export const Statistics = ({ state, total, countPercentage }) => {
-  return (
-    <Fragment>
-      <StatisticTitle>Statistics</StatisticTitle>
-      <StatisticsList
-        stateElements={state}
-        totalFeedback={total}
-        feedbackPercentage={countPercentage}
-      />
-    </Fragment>
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
+  return total === 0 ? (
+    <Notification message="There is no feedback" />
+  ) : (
+    <ItemsList>
+      <Item>Good: {good}</Item>
+      <Item>Neutral: {neutral}</Item>
+      <Item>Bad: {bad}</Item>
+      <Item>Total: {total}</Item>
+      <Item>Positive feedback: {positivePercentage}% </Item>
+    </ItemsList>
   );
 };
