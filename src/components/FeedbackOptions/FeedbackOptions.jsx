@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ButtonList, FeedButton } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -17,4 +18,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       </FeedButton>
     </ButtonList>
   );
+};
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+  options: PropTypes.object,
 };

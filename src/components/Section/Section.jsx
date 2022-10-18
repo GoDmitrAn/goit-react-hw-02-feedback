@@ -10,6 +10,6 @@ export const Section = ({ title, children }) => {
     </SectionBox>
   );
 };
-Notification.propTypes = {
+Section.propTypes = {
   title: PropTypes.string,
 };
