@@ -4,22 +4,12 @@ import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section';
 import { Container } from './App.styled';
 export class App extends Component {
-  static defaultProps = {
+  state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
-
-  state = {
-    good: this.props.good,
-    neutral: this.props.neutral,
-    bad: this.props.bad,
-  };
-  options = {
-    good: 'good',
-    neutral: 'neutral',
-    bad: 'bad',
-  };
+  options = Object.keys(this.state);
   handleIncrementFeedback = evt => {
     const { target } = evt;
 
